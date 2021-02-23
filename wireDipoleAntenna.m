@@ -1,4 +1,4 @@
-function [coeff, Zin] = wireDipoleAntenna(L, a, nSegments, excitedSeg, freq, k, V)
+function [coeff, Zin] = wireDipoleAntenna(L, a, nSegments, excitedSeg, freq, k, V, printData)
     %%%%%%%%%%%%%%%%%
     % input variables
     %%%%%%%%%%%%%%%%%
@@ -6,8 +6,9 @@ function [coeff, Zin] = wireDipoleAntenna(L, a, nSegments, excitedSeg, freq, k, 
     % a = radius of the wire
     % nSegments = number of segments in the wire
     % freq = frequency
-    % k : free space wave number
+    % k = free space wave number
     % V = applied voltage
+    % printData = flag to print output data
 
     %%%%%%%%%%%%%%%%%%
     % output variables
@@ -40,4 +41,6 @@ function [coeff, Zin] = wireDipoleAntenna(L, a, nSegments, excitedSeg, freq, k, 
 
     coeff = pinv(A)*(-Ezi);  % the weights of pulses
     Zin = V/alpha(excitedSeg);
+    
+    % TODO add code to print data
 end
