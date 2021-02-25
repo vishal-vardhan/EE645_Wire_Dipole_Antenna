@@ -1,5 +1,4 @@
-function [coeff, Zin] = wireDipoleAntenna(L, a, nSegments, excitedSeg, freq, k, V, printData)
-    tic;
+function [coeff, Zin] = wireDipoleAntenna(L, a, nSegments, excitedSeg, freq, k, V, printData='n')
     %%%%%%%%%%%%%%%%%
     % input variables
     %%%%%%%%%%%%%%%%%
@@ -41,11 +40,10 @@ function [coeff, Zin] = wireDipoleAntenna(L, a, nSegments, excitedSeg, freq, k, 
     end
 
     coeff = pinv(A)*(-Ezi);  % the weights of pulses
-    Zin = V/coeff(excitedSeg);
+    Zin = V/alpha(excitedSeg);
     
     % TODO add code to print data
-%     if printData == 'y' || printData == 'Y'
-%         % do the printing here
-%     end
-    toc;
+    if printData == 'y' | printData == 'Y'
+        
+    end
 end
