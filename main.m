@@ -1,3 +1,5 @@
+
+
 lambda = 1;  % in meters
 L = 0.47*lambda;  % length of the wire
 a = 0.005*lambda;  % radius of the wire
@@ -11,4 +13,6 @@ V = 1;  % voltage applied on the segment
 
 % plot Xin, Rin vs number of basis functions N
 % plot abs(current distribution) vs (z/lambda)
-plot(abs(coeff));
+% plot(abs(coeff));
+
+[sigma, alpha] = rcs(lambda,a,nSegments,"No");
