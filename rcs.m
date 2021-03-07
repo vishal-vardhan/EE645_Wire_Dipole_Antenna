@@ -12,13 +12,13 @@
 % using the coeffs that were found in wireDipoleAntenna,We determine linear
 % current density.
 
-function [_sigma, _alpha] = rcs(_lambda,_a,_N,_printData)
+function [sigma, alpha] = rcs(lambda,a,N,printData)
     tic;
-    _eta0 = 377;
-    _g = 1.78107; %gaama
-    _phii = pi;
+    eta0 = 377;
+    g = 1.78107; %gaama
+    phii = pi;
     
-    _k = 2*pi/_lambda; % wavenumber
+    k = 2*pi/lambda; % wavenumber
     w = 2*pi*a/N;  %segment size
     E_inc = zeros(N,1); %incident electric field
     Z = zeros(N,N);
