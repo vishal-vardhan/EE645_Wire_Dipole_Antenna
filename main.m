@@ -13,4 +13,4 @@ V = 1;  % voltage applied on the segment
 % plot abs(current distribution) vs (z/lambda)
 % plot(abs(coeff));
 
-% [sigma, alpha] = rcs(lambda,a,nSegments,"No");
+[sigma, alpha] = rcs(lambda,a,nSegments,"No");
